@@ -4,7 +4,7 @@ import { useContext } from "react";
 import CartContext from "../store/CartContext.jsx";
 import UserProgressContext from "../store/UserProgressContext.jsx";
 
-export default function Header() {
+export default function Header({ onShowHome, onShowOrder }) {
   const cartCtx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
   const uniqueItemsCount = cartCtx.items.length;
@@ -20,6 +20,12 @@ export default function Header() {
         <h1>React Food</h1>
       </div>
       <nav>
+        <Button onClick={onShowHome} textOnly={true}>
+          Home
+        </Button>
+        <Button onClick={onShowOrder} textOnly={true}>
+          Order
+        </Button>
         <Button onClick={handleShowCart} textOnly={true}>
           Cart ({uniqueItemsCount})
         </Button>

@@ -17,6 +17,9 @@ export default function MealItem({ meal }) {
     cartCtx.addItem(mealToAdd);
   }
 
+  const itemInCart = cartCtx.items.find((item) => item.id === meal.id);
+  const quantity = itemInCart ? itemInCart.quantity : 0;
+
   return (
     <li className="meal-item">
       <article>
@@ -29,7 +32,9 @@ export default function MealItem({ meal }) {
           <p className="meal-item-description">{meal.description}</p>
         </div>
         <p className="meal-item-actions">
-          <Button onClick={handleAddMealToCart}>Add to Carts</Button>
+          <Button onClick={handleAddMealToCart}>
+            {quantity > 0 ? `Add to Cart (${quantity})` : 'Add to Cart'}
+          </Button>
         </p>
       </article>
     </li>
