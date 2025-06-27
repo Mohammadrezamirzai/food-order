@@ -1,6 +1,6 @@
-![Screenshot (15)](https://github.com/user-attachments/assets/8a046ee8-9b4f-4b9b-b5ba-54f0800b789e)
-
 # React Food Order App
+
+![Screenshot (31)](https://github.com/user-attachments/assets/16e08a79-e692-4b11-b89f-9714d2826e05)
 
 A modern, fullstack food ordering application built with React (frontend) and Express (backend). Users can browse meals, add items to their cart, and place orders with a beautiful, responsive UI.
 
